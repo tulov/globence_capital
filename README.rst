@@ -24,7 +24,10 @@
 .. code-block:: shell
 
     make devenv
-    source env/bin/activate
+    source venv/bin/activate
     python manage.py migrate
     python manage.py createsuperuser
     python manage.py runserver
+
+Админка по адресу http://127.0.0.1:8000/
+Документация по адресу: http://127.0.0.1:8000/api/v1/
