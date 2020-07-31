@@ -29,3 +29,6 @@ class Order(models.Model):
 
 class BlackList(models.Model):
     iin = models.CharField(max_length=12, db_index=True)
+
+    def __str__(self):
+        return self.iin
