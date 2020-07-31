@@ -1,13 +1,12 @@
-from django.conf.urls import include
 from django.urls import path
-from rest_framework.routers import DefaultRouter
-from api.v1.views import UserViewSet, api_root
+from api.v1.views import OrderViewSet, api_root
 
 
-router = DefaultRouter()
-router.register(r'users', UserViewSet)
+order_post = OrderViewSet.as_view({
+    'post': 'create',
+})
 
 urlpatterns = [
     path('', api_root),
-    path('', include(router.urls))
+    path('orders/', order_post, name='order_create'),
 ]
