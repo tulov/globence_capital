@@ -2,7 +2,6 @@ all:
 	@echo "make devenv		- Create & setup development virtual environment"
 	@echo "make lint		- Check code with pylama"
 	@echo "make clean		- Remove files created by distutils"
-	@echo "make test		- Run tests"
 	@echo "make sdist		- Make source distribution"
 	@exit 0
 
@@ -18,9 +17,6 @@ devenv: clean
 
 lint:
 	venv/bin/pylama
-
-test: lint
-	venv/bin/pytest -vv --cov=analyzer --cov-report=term-missing tests
 
 sdist: clean
 	# официальный способ дистрибуции python-модулей

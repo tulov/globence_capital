@@ -17,4 +17,3 @@ def api_root(request, format=None):
 class UserViewSet(ReadOnlyModelViewSet):
     queryset = User.objects.all()
     serializer_class = UserSerializer
-
